@@ -1,0 +1,3315 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/21/2025 5:49:14 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="AMAZIN"
+  DTS:CreatorName="AMAZIN\DELL"
+  DTS:DTSID="{B6270C99-7379-48B5-B7B1-6DCB0343FA89}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5685.0"
+  DTS:LocaleID="1033"
+  DTS:ObjectName="Package2"
+  DTS:PackageType="5"
+  DTS:VersionBuild="21"
+  DTS:VersionGUID="{46CDE289-500D-4D25-BE39-B20DA68BA2AA}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[AMAZIN.DSS-TASK_1]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{C34EB0F5-7833-4F01-B173-7FF06869F6F0}"
+      DTS:ObjectName="AMAZIN.DSS-TASK_1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=AMAZIN;Initial Catalog=DSS-TASK_1;Provider=SQLNCLI11.1;Integrated Security=SSPI;Application Name=SSIS-Excel_File-{C34EB0F5-7833-4F01-B173-7FF06869F6F0}AMAZIN.DSS-TASK_1;Auto Translate=False;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{437FCF2E-3A38-480E-89CB-7E92A5123A20}"
+      DTS:ObjectName="Flat File">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Data Analysis_Bootcamp\DSS-TASK\Data\amazon_part2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index"
+              DTS:DTSID="{21DB4A0F-C013-4AC5-8885-76D676460307}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order ID"
+              DTS:DTSID="{8ECA9DEB-5A75-464F-A585-4119A6889B15}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{44942565-A9A0-4183-8CD8-3B08C9237728}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{68ED22C4-59F1-41A5-99A5-A1C45190A60C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fulfilment"
+              DTS:DTSID="{F471F484-5AA9-44E2-87E9-81A16F99ADE6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales Channel "
+              DTS:DTSID="{7791FE07-896A-4170-A766-52DBACF2622F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-service-level"
+              DTS:DTSID="{D91471AD-38FC-4E6E-8887-C07C26A0638A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Style"
+              DTS:DTSID="{37A632B0-8FB1-4065-8684-CAA6DDE94EBC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SKU"
+              DTS:DTSID="{CC691D92-D2DD-4149-9BB5-2A9639316019}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{B2ECC422-F43D-4A8E-851E-03C32AEA4627}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Size"
+              DTS:DTSID="{EAEB74E0-C5BC-4CC3-9E39-8E7EFC9CBD6E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ASIN"
+              DTS:DTSID="{2D4A475D-97AD-46C5-AFFD-3504058885D0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Qty"
+              DTS:DTSID="{E024ED00-4451-4CB1-AD8C-4E89264131BC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="currency"
+              DTS:DTSID="{407A644D-F9ED-43F5-BDD6-C8F60368A406}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Amount"
+              DTS:DTSID="{17F8DECA-1231-405C-B610-498FDC25E6D7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-city"
+              DTS:DTSID="{B8AC1788-DE7C-40FC-8DBE-841FE4B06F60}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-state"
+              DTS:DTSID="{01D32CD5-6C75-4076-BC16-7783918FE800}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-postal-code"
+              DTS:DTSID="{B72AB132-021C-4DAF-AE56-6F16819E14CE}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-country"
+              DTS:DTSID="{B2304684-299C-4D36-9012-1CED11965F7C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{9C62C0A0-8B89-4F99-90EA-D47E57144812}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1033"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1252"
+          DTS:ConnectionString="D:\Data Analysis_Bootcamp\DSS-TASK\Data\amazon_part2.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="index"
+              DTS:DTSID="{9D17A7E3-56EC-42CC-AEE9-724AC3B662F2}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Order ID"
+              DTS:DTSID="{0635817F-3358-467D-8B7D-7BEAD8EAF92B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Date"
+              DTS:DTSID="{AFDD0C94-08A0-468B-960C-6D8C69BF84A6}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Status"
+              DTS:DTSID="{2A924E64-2AE3-4ED6-B475-EE24A329B636}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Fulfilment"
+              DTS:DTSID="{3E09004B-AF51-4226-8DF7-DBC78A29E819}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Sales Channel "
+              DTS:DTSID="{FB960358-872E-4DA4-A9E2-70BA81AB72E4}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-service-level"
+              DTS:DTSID="{187FE8A4-B706-46E7-8B34-2B32C0638997}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Style"
+              DTS:DTSID="{7071DF83-56D7-465D-B768-ED06C803E16E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="SKU"
+              DTS:DTSID="{9E65002B-57F0-4788-B91F-AD83EC7C6564}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Category"
+              DTS:DTSID="{FFC1A342-1DEC-4F36-B606-080CA24F79FC}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Size"
+              DTS:DTSID="{020931D9-1924-4431-9FDB-01B401093134}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ASIN"
+              DTS:DTSID="{778775AB-F647-4824-A78A-4C6F943CC04E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Courier Status"
+              DTS:DTSID="{FCE9B274-5D9C-40AC-8C65-E5247071527F}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Qty"
+              DTS:DTSID="{F29F2E82-2A06-47B4-99A1-42F891572FA7}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="currency"
+              DTS:DTSID="{FB0435A5-2525-477C-8301-CCDEF16CFD5E}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Amount"
+              DTS:DTSID="{09B8F69B-BAAD-4B42-B417-4075A1F44B5A}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-city"
+              DTS:DTSID="{A80C25BB-17B8-4A03-97DF-FB3585D64A42}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-state"
+              DTS:DTSID="{A7C2A884-305D-48E1-A0F4-945F7EB855BD}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-postal-code"
+              DTS:DTSID="{1E0ABD8C-E48D-4AB8-938D-D07E9D8643A0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ship-country"
+              DTS:DTSID="{8BA49690-BE9B-4896-99B0-5739F30AA964}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="promotion-ids"
+              DTS:DTSID="{170004DD-6038-4D25-89E8-0A517CC59D90}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="B2B"
+              DTS:DTSID="{39757A70-CA46-4E07-92AA-FCA8061E1E9D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x0009_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="fulfilled-by"
+              DTS:DTSID="{988FE580-5695-4AF0-90DE-F16A7B78AA71}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000A_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Unnamed  22"
+              DTS:DTSID="{9371BD42-4DAF-4936-8914-AD4F27CB160A}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Flat File"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{1B5D662C-1698-4F67-AD00-B408C157B6AD}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Flat File"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Flat File\Conditional Split"
+              componentClassID="Microsoft.ConditionalSplit"
+              contactInfo="Conditional Split;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Routes data rows to different outputs depending on the content of the data. Use conditions (SSIS expressions) to specify which rows are routed. For example, separate records that need to be cleaned from those that are ready to be loaded or route only a subset of records."
+              name="Conditional Split"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input]"
+                  description="Input to the Conditional Split Transformation"
+                  name="Conditional Split Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File\Conditional Split.Outputs[len 8]"
+                  description="Output 1 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="len 8"
+                  synchronousInputId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[LEN](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]}) == 8</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">LEN(Date) == 8</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">0</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flat File\Conditional Split.Outputs[len 9]"
+                  description="Output 2 of the Conditional Split Transformation"
+                  errorOrTruncationOperation="Computation"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="len 9"
+                  synchronousInputId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input]"
+                  truncationRowDisposition="FailComponent">
+                  <properties>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
+                      name="Expression">[LEN](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]}) == 9</property>
+                    <property
+                      containsID="true"
+                      dataType="System.String"
+                      description="Specifies the friendly version of the expression. This expression version uses column names."
+                      expressionType="Notify"
+                      name="FriendlyExpression">LEN(Date) == 9</property>
+                    <property
+                      dataType="System.Int32"
+                      description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
+                      name="EvaluationOrder">1</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flat File\Conditional Split.Outputs[Conditional Split Default Output]"
+                  description="Default Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  name="Conditional Split Default Output"
+                  synchronousInputId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input]">
+                  <properties>
+                    <property
+                      dataType="System.Boolean"
+                      name="IsDefaultOut">true</property>
+                  </properties>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flat File\Conditional Split.Outputs[Conditional Split Error Output]"
+                  description="Error Output of the Conditional Split Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Conditional Split Error Output"
+                  synchronousInputId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Conditional Split.Outputs[Conditional Split Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File\Data Conversion"
+              componentClassID="Microsoft.DataConvert"
+              contactInfo="Data Conversion;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Data Conversion"
+              name="Data Conversion"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input]"
+                  name="Data Conversion Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="index"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[index]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Order ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Order ID"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Order ID]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Date]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Status"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Status]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Fulfilment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Fulfilment"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Fulfilment]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Sales Channel ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sales Channel "
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Sales Channel ]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[ship-service-level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-service-level"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-service-level]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Style]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Style"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Style]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[SKU]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SKU"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[SKU]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Category]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Size]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Size"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Size]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[ASIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ASIN"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ASIN]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[currency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="currency"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[currency]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Amount"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Amount]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[ship-city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-city"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-city]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[ship-state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-state"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-state]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[ship-postal-code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-postal-code"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-postal-code]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[ship-country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-country"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-country]" />
+                    <inputColumn
+                      refId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input].Columns[Qty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Qty"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Qty]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output]"
+                  exclusionGroup="1"
+                  name="Data Conversion Output"
+                  synchronousInputId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of index]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of index]"
+                      name="Copy of index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[index]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]"
+                      name="Copy of Order ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Order ID]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]"
+                      name="Copy of Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Status]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Status]"
+                      name="Copy of Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Fulfilment]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Fulfilment]"
+                      name="Copy of Fulfilment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Fulfilment]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sales Channel]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sales Channel]"
+                      name="Copy of Sales Channel"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Sales Channel ]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-service-level]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-service-level]"
+                      name="Copy of ship-service-level"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-service-level]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Style]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Style]"
+                      name="Copy of Style"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Style]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SKU]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SKU]"
+                      name="Copy of SKU"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[SKU]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]"
+                      name="Copy of Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Size]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Size]"
+                      name="Copy of Size"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Size]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ASIN]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ASIN]"
+                      name="Copy of ASIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ASIN]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of currency]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of currency]"
+                      name="Copy of currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[currency]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Amount]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="IgnoreFailure"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Amount]"
+                      name="Copy of Amount"
+                      truncationRowDisposition="IgnoreFailure">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Amount]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-city]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-city]"
+                      name="Copy of ship-city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-city]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-state]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-state]"
+                      name="Copy of ship-state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-state]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-postal-code]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-postal-code]"
+                      name="Copy of ship-postal-code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-postal-code]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-country]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      length="50"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-country]"
+                      name="Copy of ship-country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-country]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Qty]"
+                      dataType="r4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Qty]"
+                      name="Copy of Qty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the input column used as the source of data for the conversion."
+                          name="SourceInputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Qty]}</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Data Conversion Error Output"
+                  synchronousInputId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File\Derived Column"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Flat File\Derived Column.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\Derived Column.Inputs[Derived Column Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"20" + [SUBSTRING](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},8,2) + "-" + [SUBSTRING](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},1,1) + "-" + [SUBSTRING](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},3,2)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"20" + SUBSTRING(Date,8,2) + "-" + SUBSTRING(Date,1,1) + "-" + SUBSTRING(Date,3,2)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File\Derived Column.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Flat File\Derived Column.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flat File\Derived Column.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Flat File\Derived Column.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Derived Column.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File\Derived Column 1"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column 1"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Flat File\Derived Column 1.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\Derived Column 1.Inputs[Derived Column Input].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      truncationRowDisposition="FailComponent"
+                      usageType="readWrite">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">"20" + [SUBSTRING](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},7,2) + "-" + [SUBSTRING](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},1,1) + "-" + [SUBSTRING](#{Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]},3,1)</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">"20" + SUBSTRING(Date,7,2) + "-" + SUBSTRING(Date,1,1) + "-" + SUBSTRING(Date,3,1)</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File\Derived Column 1.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Flat File\Derived Column 1.Inputs[Derived Column Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Flat File\Derived Column 1.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Flat File\Derived Column 1.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Derived Column 1.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File\Flat File Source"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1033"
+              name="Flat File Source"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flat File\Flat File Source.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[index]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[index]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[index]"
+                      name="index"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]"
+                      name="Order ID"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]"
+                      name="Date"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Status]"
+                      name="Status"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Fulfilment]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fulfilment]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Fulfilment]"
+                      name="Fulfilment"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel ]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales Channel ]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel ]"
+                      name="Sales Channel "
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-service-level]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-service-level]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-service-level]"
+                      name="ship-service-level"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Style]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Style]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Style]"
+                      name="Style"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[SKU]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SKU]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[SKU]"
+                      name="SKU"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Category]"
+                      name="Category"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Size]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Size]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Size]"
+                      name="Size"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ASIN]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]"
+                      name="ASIN"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[currency]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[currency]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[currency]"
+                      name="currency"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Amount]"
+                      name="Amount"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-city]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-city]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-city]"
+                      name="ship-city"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-state]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-state]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-state]"
+                      name="ship-state"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-postal-code]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-postal-code]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-postal-code]"
+                      name="ship-postal-code"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-country]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-country]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-country]"
+                      name="ship-country"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Qty]"
+                      codePage="1252"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Qty]"
+                      length="50"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Qty]"
+                      name="Qty"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="index" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Order ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Fulfilment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Fulfilment" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Sales Channel ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Sales Channel " />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-service-level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ship-service-level" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Style]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Style" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[SKU]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Size]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Size" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ASIN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ASIN" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Qty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Qty" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[currency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="currency" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ship-city" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ship-state" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-postal-code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ship-postal-code" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[ship-country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="ship-country" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Courier Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Courier Status" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[promotion-ids]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="promotion-ids" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[B2B]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="B2B" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[fulfilled-by]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="fulfilled-by" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].ExternalColumns[Unnamed  22]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      name="Unnamed  22" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1252"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[test13]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Flat File\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[AMAZIN.DSS-TASK_1]"
+                  connectionManagerRefId="Package.ConnectionManagers[AMAZIN.DSS-TASK_1]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="IgnoreFailure"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Status]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Status"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Status]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of index]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of index"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[index]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of index]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Order ID]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Order ID"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Order ID]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Order ID]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Date]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Date"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Date]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Fulfilment]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Fulfilment"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fulfilment]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Fulfilment]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Sales Channel]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Sales Channel"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Channel ]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Sales Channel]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ship-service-level]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ship-service-level"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-service-level]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-service-level]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Style]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Style"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Style]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Style]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of SKU]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of SKU"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of SKU]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Category]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Category"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Category]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Size]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of Size"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Size]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Size]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ASIN]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ASIN"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASIN]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ASIN]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of currency]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of currency"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[currency]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of currency]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Amount]"
+                      cachedDataType="r4"
+                      cachedName="Copy of Amount"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Amount]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ship-state]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ship-state"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-state]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-state]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ship-postal-code]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ship-postal-code"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-postal-code]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-postal-code]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ship-country]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ship-country"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-country]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-country]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of Qty]"
+                      cachedDataType="r4"
+                      cachedName="Copy of Qty"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Qty]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of Qty]" />
+                    <inputColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[Copy of ship-city]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="Copy of ship-city"
+                      externalMetadataColumnId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-city]"
+                      lineageId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output].Columns[Copy of ship-city]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[index]"
+                      dataType="r8"
+                      name="index" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Order ID]"
+                      dataType="wstr"
+                      length="255"
+                      name="Order ID" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Date]"
+                      dataType="wstr"
+                      length="255"
+                      name="Date" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Status]"
+                      dataType="wstr"
+                      length="255"
+                      name="Status" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Fulfilment]"
+                      dataType="wstr"
+                      length="255"
+                      name="Fulfilment" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Sales Channel ]"
+                      dataType="wstr"
+                      length="255"
+                      name="Sales Channel " />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-service-level]"
+                      dataType="wstr"
+                      length="255"
+                      name="ship-service-level" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Style]"
+                      dataType="wstr"
+                      length="255"
+                      name="Style" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[SKU]"
+                      dataType="wstr"
+                      length="255"
+                      name="SKU" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Category]"
+                      dataType="wstr"
+                      length="255"
+                      name="Category" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Size]"
+                      dataType="wstr"
+                      length="255"
+                      name="Size" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ASIN]"
+                      dataType="wstr"
+                      length="255"
+                      name="ASIN" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[currency]"
+                      dataType="wstr"
+                      length="255"
+                      name="currency" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Amount]"
+                      dataType="r8"
+                      name="Amount" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-city]"
+                      dataType="wstr"
+                      length="255"
+                      name="ship-city" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-state]"
+                      dataType="wstr"
+                      length="255"
+                      name="ship-state" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-postal-code]"
+                      dataType="r8"
+                      name="ship-postal-code" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ship-country]"
+                      dataType="wstr"
+                      length="255"
+                      name="ship-country" />
+                    <externalMetadataColumn
+                      refId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Qty]"
+                      dataType="r8"
+                      name="Qty" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Flat File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Flat File\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Flat File\Union All"
+              componentClassID="Microsoft.UnionAll"
+              contactInfo="Union All;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Combines rows from multiple data flows without sorting. For example, add rows back to a data flow after correction of errors. If sorting is important, we recommend using the Merge transformation."
+              name="Union All"
+              version="1">
+              <inputs>
+                <input
+                  refId="Package\Flat File\Union All.Inputs[Union All Input 1]"
+                  name="Union All Input 1">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="index"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[index]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[index]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Order ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Order ID"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Order ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Status"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Fulfilment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Fulfilment"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Fulfilment]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Fulfilment]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Sales Channel ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sales Channel "
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Sales Channel ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[ship-service-level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-service-level"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-service-level]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-service-level]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Style]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Style"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Style]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Style]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[SKU]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SKU"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[SKU]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[SKU]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Size]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Size"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Size]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Size]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[ASIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ASIN"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ASIN]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[currency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="currency"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[currency]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[currency]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Amount"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Amount]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Amount]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[ship-city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-city"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-city]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-city]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[ship-state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-state"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[ship-postal-code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-postal-code"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-postal-code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-postal-code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[ship-country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-country"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-country]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 1].Columns[Qty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Qty"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Qty]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Qty]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Flat File\Union All.Inputs[Union All Input 2]"
+                  hasSideEffects="true"
+                  name="Union All Input 2">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[index]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="index"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[index]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[index]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Order ID]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Order ID"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Order ID]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Order ID]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Date]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Date"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Date]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Date]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Status]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Status"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Status]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Status]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Fulfilment]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Fulfilment"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Fulfilment]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Fulfilment]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Sales Channel ]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Sales Channel "
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Sales Channel ]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Sales Channel ]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[ship-service-level]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-service-level"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-service-level]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-service-level]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Style]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Style"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Style]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Style]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[SKU]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="SKU"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[SKU]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[SKU]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Category]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Category"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Category]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Category]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Size]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Size"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Size]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Size]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[ASIN]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ASIN"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ASIN]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ASIN]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[currency]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="currency"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[currency]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[currency]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Amount]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Amount"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Amount]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Amount]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[ship-city]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-city"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-city]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-city]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[ship-state]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-state"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-state]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-state]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[ship-postal-code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-postal-code"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-postal-code]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-postal-code]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[ship-country]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="ship-country"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[ship-country]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-country]}</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\Flat File\Union All.Inputs[Union All Input 2].Columns[Qty]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="Qty"
+                      lineageId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output].Columns[Qty]">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Output column lineage ID"
+                          name="OutputColumnLineageID">#{Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Qty]}</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+                <input
+                  refId="Package\Flat File\Union All.Inputs[Union All Input 3]"
+                  dangling="true"
+                  hasSideEffects="true"
+                  name="Union All Input 3">
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Flat File\Union All.Outputs[Union All Output 1]"
+                  name="Union All Output 1">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[index]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[index]"
+                      name="index" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Order ID]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Order ID]"
+                      name="Order ID" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Date]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Date]"
+                      name="Date" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Status]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Status]"
+                      name="Status" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Fulfilment]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Fulfilment]"
+                      name="Fulfilment" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Sales Channel ]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Sales Channel ]"
+                      name="Sales Channel " />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-service-level]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-service-level]"
+                      name="ship-service-level" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Style]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Style]"
+                      name="Style" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[SKU]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[SKU]"
+                      name="SKU" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Category]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Category]"
+                      name="Category" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Size]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Size]"
+                      name="Size" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ASIN]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ASIN]"
+                      name="ASIN" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[currency]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[currency]"
+                      name="currency" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Amount]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Amount]"
+                      name="Amount" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-city]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-city]"
+                      name="ship-city" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-state]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-state]"
+                      name="ship-state" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-postal-code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-postal-code]"
+                      name="ship-postal-code" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-country]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[ship-country]"
+                      name="ship-country" />
+                    <outputColumn
+                      refId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Qty]"
+                      codePage="1252"
+                      dataType="str"
+                      length="50"
+                      lineageId="Package\Flat File\Union All.Outputs[Union All Output 1].Columns[Qty]"
+                      name="Qty" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Flat File.Paths[Data Conversion Output]"
+              endId="Package\Flat File\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Data Conversion Output"
+              startId="Package\Flat File\Data Conversion.Outputs[Data Conversion Output]" />
+            <path
+              refId="Package\Flat File.Paths[Derived Column Output]"
+              endId="Package\Flat File\Union All.Inputs[Union All Input 1]"
+              name="Derived Column Output"
+              startId="Package\Flat File\Derived Column 1.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Flat File.Paths[Derived Column Output1]"
+              endId="Package\Flat File\Union All.Inputs[Union All Input 2]"
+              name="Derived Column Output"
+              startId="Package\Flat File\Derived Column.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Flat File.Paths[Flat File Source Output]"
+              endId="Package\Flat File\Conditional Split.Inputs[Conditional Split Input]"
+              name="Flat File Source Output"
+              startId="Package\Flat File\Flat File Source.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Flat File.Paths[len 8]"
+              endId="Package\Flat File\Derived Column 1.Inputs[Derived Column Input]"
+              name="len 8"
+              startId="Package\Flat File\Conditional Split.Outputs[len 8]" />
+            <path
+              refId="Package\Flat File.Paths[len 9]"
+              endId="Package\Flat File\Derived Column.Inputs[Derived Column Input]"
+              name="len 9"
+              startId="Package\Flat File\Conditional Split.Outputs[len 9]" />
+            <path
+              refId="Package\Flat File.Paths[Union All Output 1]"
+              endId="Package\Flat File\Data Conversion.Inputs[Data Conversion Input]"
+              name="Union All Output 1"
+              startId="Package\Flat File\Union All.Outputs[Union All Output 1]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="118,42"
+          Id="Package\Flat File"
+          TopLeft="407,95" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Flat File">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="156,42"
+          Id="Package\Flat File\Flat File Source"
+          TopLeft="74,52" />
+        <NodeLayout
+          Size="159,42"
+          Id="Package\Flat File\Conditional Split"
+          TopLeft="548,47" />
+        <NodeLayout
+          Size="158,42"
+          Id="Package\Flat File\Derived Column"
+          TopLeft="811,216" />
+        <NodeLayout
+          Size="167,42"
+          Id="Package\Flat File\Derived Column 1"
+          TopLeft="281,215" />
+        <NodeLayout
+          Size="161,42"
+          Id="Package\Flat File\Data Conversion"
+          TopLeft="556,336" />
+        <EdgeLayout
+          Id="Package\Flat File.Paths[Flat File Source Output]"
+          TopLeft="230,70.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="318,0"
+              Start="0,0"
+              End="310.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="310.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flat File.Paths[len 8]"
+          TopLeft="627.5,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-263,126"
+              Start="0,0"
+              End="-263,118.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,59" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,59"
+                    Point2="0,63"
+                    Point3="-4,63" />
+                  <mssgle:LineSegment
+                    End="-259,63" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-259,63"
+                    Point2="-263,63"
+                    Point3="-263,67" />
+                  <mssgle:LineSegment
+                    End="-263,118.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-142.83703125,68,22.6740625,9.763671875"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flat File.Paths[len 9]"
+          TopLeft="652.666666666667,89">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="237.333333333333,127"
+              Start="0,0"
+              End="237.333333333333,119.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47.5591531755915" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,47.5591531755915"
+                    Point2="0,51.5591531755915"
+                    Point3="4,51.5591531755915" />
+                  <mssgle:LineSegment
+                    End="233.333333333333,51.5591531755915" />
+                  <mssgle:CubicBezierSegment
+                    Point1="233.333333333333,51.5591531755915"
+                    Point2="237.333333333333,51.5591531755915"
+                    Point3="237.333333333333,55.5591531755915" />
+                  <mssgle:LineSegment
+                    End="237.333333333333,119.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="107.356490885417,56.5591531755915,22.6203515625,9.7392578125"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="123,42"
+          Id="Package\Flat File\Union All"
+          TopLeft="573,216" />
+        <EdgeLayout
+          Id="Package\Flat File.Paths[Derived Column Output]"
+          TopLeft="448,236.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="125,0"
+              Start="0,0"
+              End="117.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="117.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flat File.Paths[Derived Column Output1]"
+          TopLeft="811,237">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-115,0"
+              Start="0,0"
+              End="-107.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="-107.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Flat File.Paths[Union All Output 1]"
+          TopLeft="635.5,258">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,78"
+              Start="0,0"
+              End="0,70.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,70.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="177,42"
+          Id="Package\Flat File\OLE DB Destination"
+          TopLeft="554,450" />
+        <EdgeLayout
+          Id="Package\Flat File.Paths[Data Conversion Output]"
+          TopLeft="639.5,378">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,72"
+              Start="0,0"
+              End="0,64.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,64.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Flat File\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

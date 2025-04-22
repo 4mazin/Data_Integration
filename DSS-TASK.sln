@@ -1,0 +1,20 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{C9674DCB-5085-4A16-B785-4C70DD1589BD}") = "DSS-TASK", "DSS-TASK\DSS-TASK.dtproj", "{49859B42-4564-FC4E-6432-3B3212FC3A6E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{49859B42-4564-FC4E-6432-3B3212FC3A6E}.Development|Default.Build.0 = ?|?
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {93153465-25FC-4A7F-AA09-2B65E1C460F1}
+	EndGlobalSection
+EndGlobal
