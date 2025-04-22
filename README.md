@@ -1,1 +1,1 @@
-this task analysis the amazon sales 
+this task we integrate three different file sources (csv, excel, flatefile)
