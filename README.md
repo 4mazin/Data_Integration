@@ -1,43 +1,37 @@
-📊 Amazon India Sales Dashboard
-This project presents an interactive Power BI dashboard that analyzes sales performance data from Amazon India. It provides key business insights such as total revenue, sales by category, shipping trends, and performance across cities and product sizes.
+📊 Amazon India Sales Analysis Project
+This project demonstrates a full ETL + Dashboard solution for analyzing Amazon India sales data. It integrates multiple data sources, cleans and standardizes date formats using SSIS (SQL Server Integration Services), and delivers an interactive Power BI dashboard to uncover key business insights.
 
-🔍 Overview
-Visualizes 78M+ in total sales across a 3-month period (April–June 2022)
+🔧 Project Overview
+ETL with SSIS: Extracted raw files in .csv, .xlsx, and .txt formats
 
-Identifies trends by city, category, shipping method, status, and product size
+Date Standardization: Converted inconsistent date fields from MM/DD/YYYY to YYYY-MM-DD
 
-Allows dynamic filtering by date range, shipping service level, and more
+Data Cleaning: Removed nulls, formatted fields, and prepared unified sales data for analysis
 
-Built using Power BI with data cleaning and integration done in Excel and Power Query
-
-📌 Key Features
-Feature	Description
-💰 Total Sales KPI	Displays total sales amount with dynamic time filtering
-🏙️ Sales by City	Donut chart showing sales distribution across major Indian cities
-🚚 Sales by Ship Service Level	Tree map comparison between Expedited and Standard shipping
-📦 Sales by Size	Bar chart showing which clothing sizes sell the most
-📆 Time Series Analysis	Line graph tracking daily sales trends over 3 months
-📂 Category & Status Breakdown	Charts analyzing product categories and shipping statuses
+Power BI Dashboard: Visualized total sales, sales by city, category, size, shipping status, and over time
 
 🧰 Tools Used
-Power BI – Data modeling, dashboard creation, visualization
+Visual Studio SSIS – ETL pipeline (extract, clean, transform, load)
 
-Excel – Data cleaning and formatting
+Power BI – Dashboard design and visual storytelling
 
-Power Query – Data transformation within Power BI
+Excel – Raw data preparation and early formatting
 
-📈 Business Insights
-Set Kurtas and Western Dresses are top-selling categories
+| Feature                        | Description                                                       |
+| ------------------------------ | ----------------------------------------------------------------- |
+| 💰 Total Sales KPI             | Displays total sales amount with dynamic time filtering           |
+| 🏙️ Sales by City              | Donut chart showing sales distribution across major Indian cities |
+| 🚚 Sales by Ship Service Level | Tree map comparing Expedited vs Standard shipping                 |
+| 📦 Sales by Size               | Identifies top-selling clothing sizes                             |
+| 📂 Sales by Category & Status  | Shows top-selling product types and shipping performance          |
+| 📈 Daily Sales Trend           | Line chart tracking sales patterns over time                      |
 
-Large and medium clothing sizes generate the highest revenue
-
-Sheikh Zayed and 6th of October cities (if relevant) can be expanded into deep-dive views
-
-Peak sales activity observed in May 2022
 
 📁 Dataset
-Source: Cleaned dataset derived from Kaggle (not published due to terms)
+Source: Amazon India sales (from Kaggle)
 
-Contains ~3 months of order-level data for Amazon India
+Contains order-level data from April to June 2022
 
-Includes attributes like: order_date, city, category, size, status, service_level, sales
+Includes: order_date, city, category, size, status, shipping_method, sales
+
+<img width="1522" height="799" alt="image" src="https://github.com/user-attachments/assets/b599295e-8dc8-4e8d-b050-0d8e31be245b" />
