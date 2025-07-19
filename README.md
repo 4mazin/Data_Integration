@@ -34,4 +34,4 @@ Contains order-level data from April to June 2022
 
 Includes: order_date, city, category, size, status, shipping_method, sales
 
-<img width="1522" height="799" alt="image" src="https://github.com/user-attachments/assets/b599295e-8dc8-4e8d-b050-0d8e31be245b" />
+<img width="1517" height="799" alt="image" src="https://github.com/user-attachments/assets/7d826516-affa-4703-911b-2dc0525de1a5" />
